@@ -1,0 +1,11 @@
+<%- include('partials/header') -%>
+
+    <% user.forEach(function(movie){ %>
+        <li>  <%= movie["Title"] %> - <%= movie["Year"]  %> - <%= movie["imdbID"] %> </li>
+    
+        <% }) %>
+    
+        <p><a href="/completed">View your completed list</a></p>
+        <p><a href="/">Search for another movie</a></p>
+        
+<%- include('partials/footer') -%>

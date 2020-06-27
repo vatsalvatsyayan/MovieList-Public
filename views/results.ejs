@@ -1,0 +1,48 @@
+<%- include('partials/header') -%>
+
+<style type="text/css">
+    
+
+    body{
+        background-image: url("https://wallpaperplay.com/walls/full/4/1/4/210505.jpg");
+         background-size: cover;
+    }
+</style> 
+
+
+
+<% data["Search"].forEach(function(movie){ %>
+    <li>
+        <%= movie["Title"] %> - <%= movie["Year"]  %> 
+        <% var query = movie["imdbID"] %>
+        <% var ink = "http://www.omdbapi.com/?i=" + query +"&apikey=e58f3a8e" %>
+        
+        <form method="POST" action="/info">
+      
+
+        <input type="hidden" name="movielink" value="<%= ink %>">
+        <button type="submit" class="btn btn-primary">More Details</button>
+    </form>
+        
+    <form method="POST" action="/completed">
+      
+
+        <input type="hidden" name="movielink" value="<%= ink %>">
+        <button type="submit" class="btn btn-success">Add to Completed</button>
+    </form>
+
+    <form method="POST" action="/towatch">
+        
+
+        <input type="hidden" name="movielink" value="<%= ink %>">
+        <button type="submit" class="btn btn-info">Add to Watch List</button>
+
+    </form>
+</li>
+<% }) %>
+</ul>
+
+<a href="/">Search Again</a>
+<button>Click me</button>
+
+<%- include('partials/footer') -%>

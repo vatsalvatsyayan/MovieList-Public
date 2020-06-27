@@ -1,0 +1,61 @@
+<style type="text/css">
+    body{
+        background-image: url("https://i.pinimg.com/564x/05/94/c9/0594c9f0ee9bd01dec087f548e03db58.jpg");
+        background-size: cover;
+        color: black;
+    }
+</style> 
+
+<%- include('partials/header') -%>
+    
+    <p>Movie Data</p>      
+    <li>
+       <strong>Title:</strong> <%= data['Title'] %>
+    </li>
+    
+    <li>
+       <strong>Year:</strong> <%= data['Year'] %>
+    </li>
+
+    <li>
+        <strong>Released:</strong>  <%= data['Released'] %>
+    </li>
+
+    <li>
+        <strong>Runtime:</strong> <%= data['Runtime'] %>
+    </li>
+
+    <li>
+        <strong>Genre:</strong> <%= data['Genre'] %>
+    </li>
+
+    <li>
+        <strong>Director:</strong> <%= data['Director'] %>
+    </li>
+
+    <li>
+        <strong>Writer:</strong> <%= data['Writer'] %>
+    </li>
+
+    <li>
+        <strong>Actors:</strong> <%= data['Actors'] %>
+    </li>
+
+    <li>
+        <strong>Plot:</strong>  <%= data['Plot'] %>
+    </li>
+
+    <li>
+        <strong>Language:</strong> <%= data['Language'] %>
+    </li>
+
+    <li>
+        <strong>Awards:</strong>  <%= data['Awards'] %>
+    </li>
+    
+    
+
+    <li>
+      <strong>IMDB Rating:</strong>  <%= data['imdbRating'] %>
+    </li>
+<%- include('partials/footer') -%>
